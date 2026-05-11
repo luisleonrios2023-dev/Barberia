@@ -1,0 +1,179 @@
+/* ─────────────────────────────
+   FOOTER BARBERÍA OLD SCHOOL
+───────────────────────────── */
+
+footer {
+    width: 100%;
+
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+
+    padding: 4rem 2rem 2rem 2rem;
+}
+
+/* ───────── CONTENIDO SUPERIOR ───────── */
+
+.footer-contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+
+    flex-wrap: wrap;
+
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(197, 157, 95, 0.2);
+}
+
+/* SECCIONES */
+.footer-contenido section {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* TÍTULOS */
+.footer-contenido h3 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    color: #c59d5f;
+
+    margin-bottom: 1.5rem;
+}
+
+/* ───────── REDES SOCIALES ───────── */
+
+.redes-sociales ul {
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.redes-sociales a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    color: #c59d5f;
+    padding-left: 5px;
+}
+
+/* ───────── DIRECCIÓN ───────── */
+
+.direccion p {
+    margin-bottom: 0.8rem;
+
+    font-size: 1rem;
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.direccion strong {
+    color: #c59d5f;
+}
+
+/* ───────── COPYRIGHT ───────── */
+
+.footer-copy {
+    text-align: center;
+
+    margin-top: 2rem;
+}
+
+.footer-copy p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ───────── RESPONSIVE ───────── */
+
+@media (max-width: 768px) {
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .redes-sociales ul {
+        align-items: center;
+    }
+}
+
+/* ─────────────────────────────
+   REDES SOCIALES CON ICONOS
+───────────────────────────── */
+
+.redes-sociales ul {
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* cada item */
+.redes-sociales li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    transition: 0.3s ease;
+
+    
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+}
+
+/* iconos */
+.redes-sociales img {
+    width: 22px;
+    height: 22px;
+
+    object-fit: contain;
+
+    filter: brightness(0.9);
+}
+
+/* enlaces */
+.redes-sociales a {
+    text-decoration: none;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 1rem;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+/* hover conjunto (icono + texto) */
+.redes-sociales li:hover a {
+    color: #c59d5f;
+}
+
+.redes-sociales li:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* efecto suave */
+.redes-sociales img {
+    transition: 0.3s ease;
+}
+
+/* alineación más “premium” */
+.redes-sociales li:hover {
+    transform: translateX(5px);
+    background-color: rgba(197, 157, 95, 0.08);
+}
+
