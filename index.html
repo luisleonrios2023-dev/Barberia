@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es_ES">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -54,9 +54,17 @@
         <!-- Menú -->
         <nav>
             <ul>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#reserva">Reserva</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li>
+                    <a href="#servicios" aria-label="Ir a la sección de servicios">Servicios</a>
+                </li>
+
+                <li>
+                    <a href="#reserva" aria-label="Ir a la sección de reserva de citas">Reserva</a>
+                </li>
+
+                <li>
+                    <a href="contacto.html" aria-label="Ir a la página de contacto">Contacto</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -119,9 +127,8 @@
                 </p>
             </div>
             <div>
-                <img src="img/aboutus.png" >
+                <img src="img/aboutus.png" alt="Barbero trabajando en una barbería clásica" loading="lazy">
             </div>
-
         </section>
 
     </main>
@@ -131,53 +138,59 @@
         <div class="footer-contenido">
 
             <!-- Redes sociales -->
-            <section class="redes-sociales">
+            <section class="redes-sociales" aria-labelledby="titulo-redes">
 
-                <h3>Redes Sociales</h3>
+                <h3 id="titulo-redes">Redes Sociales</h3>
 
-                <ul>
-                    <li>
-                        <img src="/img/icono-facebook.webp">
-                        <a href="#">Facebook</a>
-                    </li>
+                <nav aria-label="Redes sociales de Mi Barbería">
+                    <ul>
+                        <li>
+                            <a href="#" aria-label="Visitar Facebook de Mi Barbería">
+                                <img src="/img/icono-facebook.webp" alt="" aria-hidden="true" loading="lazy">
+                                Facebook
+                            </a>
+                        </li>
 
-                    <li>
-                        <img src="/img/icono-x.webp">
-                        <a href="#">X</a>
-                    </li>
+                        <li>
+                            <a href="#" aria-label="Visitar X (Twitter) de Mi Barbería">
+                                <img src="/img/icono-x.webp" alt="" aria-hidden="true" loading="lazy">
+                                X
+                            </a>
+                        </li>
 
-                    <li>
-                        <img src="/img/icono-instagram.webp">
-                        <a href="#">Instagram</a>
-                    </li>
-                </ul>
+                        <li>
+                            <a href="#" aria-label="Visitar Instagram de Mi Barbería">
+                                <img src="/img/icono-instagram.webp" alt="" aria-hidden="true" loading="lazy">
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
             </section>
 
-
             <!-- Dirección -->
-            <section class="direccion">
+            <section class="direccion" aria-labelledby="titulo-direccion">
 
-                <h3>Dirección</h3>
+                <h3 id="titulo-direccion">Dirección</h3>
 
-                <p><strong>Dirección:</strong> Calle Doctor Esquerdo 120</p>
-
-                <p><strong>Teléfono:</strong> +34 912 345 678</p>
-
-                <p><strong>Email:</strong> contacto@mibarberia.com</p>
-
-                <p><strong>Ciudad:</strong> Madrid, España</p>
+                <address>
+                    <p><strong>Dirección:</strong> Calle Doctor Esquerdo 120</p>
+                    <p><strong>Teléfono:</strong> <a href="tel:+34912345678">+34 912 345 678</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:contacto@mibarberia.com">contacto@mibarberia.com</a></p>
+                    <p><strong>Ciudad:</strong> Madrid, España</p>
+                </address>
 
             </section>
 
         </div>
 
-
         <!-- Parte inferior -->
         <div class="footer-copy">
 
             <p>
-                © 2026 MiBarberia - Desarrollado por Luis León
+                © 2026 MiBarberia - Desarrollado por
+                <strong>Luis León</strong>
             </p>
 
         </div>
