@@ -1,0 +1,93 @@
+/* Importación de fuente elegante */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+/* HEADER PRINCIPAL */
+header {
+    width: 100%;
+    background-color: #111; /* negro elegante */
+    color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    border-bottom: 2px solid #b08d57; /* toque dorado old school */
+}
+
+/* LOGO */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* NAV */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* efecto hover old school */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #b08d57;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #b08d57;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ========================= */
+/* RESPONSIVE (MÓVIL) */
+/* ========================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+}
