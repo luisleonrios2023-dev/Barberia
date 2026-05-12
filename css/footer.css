@@ -1,5 +1,5 @@
 /* ─────────────────────────────
-   FOOTER BARBERÍA OLD SCHOOL
+   FOOTER OLD SCHOOL BARBERÍA
 ───────────────────────────── */
 
 footer {
@@ -8,32 +8,35 @@ footer {
     background-color: #0a0a0a;
     color: #f5f5f5;
 
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 4rem 2rem 2rem;
+
+    border-top: 2px solid #c59d5f;
 }
 
 /* ───────── CONTENIDO SUPERIOR ───────── */
 
 .footer-contenido {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
 
     display: flex;
     justify-content: space-between;
-    gap: 3rem;
+    gap: 4rem;
 
     flex-wrap: wrap;
 
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
+
     border-bottom: 1px solid rgba(197, 157, 95, 0.2);
 }
 
-/* SECCIONES */
+/* secciones */
 .footer-contenido section {
     flex: 1;
-    min-width: 250px;
+    min-width: 280px;
 }
 
-/* TÍTULOS */
+/* títulos */
 .footer-contenido h3 {
     font-size: 1.4rem;
     text-transform: uppercase;
@@ -44,72 +47,8 @@ footer {
     margin-bottom: 1.5rem;
 }
 
-/* ───────── REDES SOCIALES ───────── */
-
-.redes-sociales ul {
-    list-style: none;
-    padding: 0;
-
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.redes-sociales a {
-    color: rgba(255, 255, 255, 0.85);
-    text-decoration: none;
-
-    transition: 0.3s ease;
-}
-
-.redes-sociales a:hover {
-    color: #c59d5f;
-    padding-left: 5px;
-}
-
-/* ───────── DIRECCIÓN ───────── */
-
-.direccion p {
-    margin-bottom: 0.8rem;
-
-    font-size: 1rem;
-    line-height: 1.6;
-
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.direccion strong {
-    color: #c59d5f;
-}
-
-/* ───────── COPYRIGHT ───────── */
-
-.footer-copy {
-    text-align: center;
-
-    margin-top: 2rem;
-}
-
-.footer-copy p {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-/* ───────── RESPONSIVE ───────── */
-
-@media (max-width: 768px) {
-    .footer-contenido {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .redes-sociales ul {
-        align-items: center;
-    }
-}
-
 /* ─────────────────────────────
-   REDES SOCIALES CON ICONOS
+   REDES SOCIALES
 ───────────────────────────── */
 
 .redes-sociales ul {
@@ -117,21 +56,24 @@ footer {
     padding: 0;
 
     display: flex;
-    flex-direction: column;
     gap: 1rem;
 }
 
-/* cada item */
-.redes-sociales li {
+/* enlaces iconos */
+.redes-sociales a {
+    width: 50px;
+    height: 50px;
+
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 0.8rem;
 
-    transition: 0.3s ease;
+    background-color: #141414;
 
-    
-    padding: 0.4rem 0.6rem;
-    border-radius: 6px;
+    border: 1px solid rgba(197, 157, 95, 0.2);
+    border-radius: 50%;
+
+    transition: all 0.3s ease;
 }
 
 /* iconos */
@@ -141,39 +83,134 @@ footer {
 
     object-fit: contain;
 
-    filter: brightness(0.9);
+    transition: transform 0.3s ease;
 }
 
-/* enlaces */
-.redes-sociales a {
-    text-decoration: none;
+/* hover */
+.redes-sociales a:hover {
+    background-color: #c59d5f;
 
-    color: rgba(255, 255, 255, 0.85);
-
-    font-size: 1rem;
-    letter-spacing: 1px;
-
-    transition: 0.3s ease;
+    transform: translateY(-4px);
 }
 
-/* hover conjunto (icono + texto) */
-.redes-sociales li:hover a {
+.redes-sociales a:hover img {
+    transform: scale(1.1);
+}
+
+/* ─────────────────────────────
+   DIRECCIÓN
+───────────────────────────── */
+
+.direccion address {
+    font-style: normal;
+}
+
+.direccion ul {
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.direccion li {
+    color: rgba(255, 255, 255, 0.8);
+
+    line-height: 1.6;
+}
+
+.direccion strong {
     color: #c59d5f;
 }
 
-.redes-sociales li:hover img {
-    transform: scale(1.1);
-    filter: brightness(1.2);
+/* enlaces contacto */
+.direccion a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+
+    transition: color 0.3s ease;
 }
 
-/* efecto suave */
-.redes-sociales img {
-    transition: 0.3s ease;
+.direccion a:hover {
+    color: #c59d5f;
 }
 
-/* alineación más “premium” */
-.redes-sociales li:hover {
-    transform: translateX(5px);
-    background-color: rgba(197, 157, 95, 0.08);
+/* ─────────────────────────────
+   PARTE INFERIOR
+───────────────────────────── */
+
+.footer-copy {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+
+    text-align: center;
 }
 
+/* texto */
+.footer-copy p,
+.footer-copy small {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 0.95rem;
+}
+
+/* nombre desarrollador */
+.footer-copy strong {
+    color: #c59d5f;
+}
+
+/* enlaces legales */
+.footer-copy nav ul {
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    gap: 1.5rem;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.footer-copy nav a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.footer-copy nav a:hover {
+    color: #c59d5f;
+}
+
+/* ─────────────────────────────
+   RESPONSIVE
+───────────────────────────── */
+
+@media (max-width: 768px) {
+    .footer-contenido {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .footer-contenido section {
+        text-align: center;
+    }
+
+    .redes-sociales ul {
+        justify-content: center;
+    }
+
+    .direccion ul {
+        align-items: center;
+    }
+}
