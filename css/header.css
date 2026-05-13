@@ -1,93 +1,226 @@
-/* Importación de fuente elegante */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+/* ─────────────────────────────
+   HEADER OLD SCHOOL BARBERÍA
+───────────────────────────── */
 
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+.header {
+    position: sticky;
+    top: 0;
 
-body {
-    font-family: 'Playfair Display', serif;
-}
-
-/* HEADER PRINCIPAL */
-header {
     width: 100%;
-    background-color: #111; /* negro elegante */
-    color: #f5f5f5;
+
+    background-color: rgba(10, 10, 10, 0.95);
+
+    backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid rgba(197, 157, 95, 0.15);
+
+    z-index: 1000;
+}
+
+/* contenedor */
+.header-contenedor {
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 1rem 2rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 40px;
-    border-bottom: 2px solid #b08d57; /* toque dorado old school */
+
+    gap: 2rem;
 }
 
-/* LOGO */
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #f5f5f5;
-    text-transform: uppercase;
-    cursor: pointer;
-}
+/* ─────────────────────────────
+   LOGO
+───────────────────────────── */
 
-/* NAV */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-nav ul li a {
+.logo a {
     text-decoration: none;
+
     color: #f5f5f5;
-    font-size: 1rem;
-    letter-spacing: 1px;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+
     text-transform: uppercase;
-    position: relative;
+    letter-spacing: 2px;
+
     transition: color 0.3s ease;
 }
 
-/* efecto hover old school */
-nav ul li a::after {
+.logo a:hover {
+    color: #c59d5f;
+}
+
+/* ─────────────────────────────
+   NAVEGACIÓN
+───────────────────────────── */
+
+.navegacion ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* enlaces */
+.navegacion a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    transition: color 0.3s ease;
+}
+
+/* línea hover */
+.navegacion a::after {
     content: "";
+
     position: absolute;
     left: 0;
-    bottom: -4px;
+    bottom: -6px;
+
     width: 0%;
     height: 2px;
-    background-color: #b08d57;
+
+    background-color: #c59d5f;
+
     transition: width 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #b08d57;
+.navegacion a:hover {
+    color: #c59d5f;
 }
 
-nav ul li a:hover::after {
+.navegacion a:hover::after {
     width: 100%;
 }
 
-/* ========================= */
-/* RESPONSIVE (MÓVIL) */
-/* ========================= */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        gap: 12px;
-        padding: 15px 20px;
+/* ─────────────────────────────
+   BOTÓN RESERVA
+───────────────────────────── */
+
+.boton-reserva {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.9rem 1.8rem;
+
+    background-color: #c59d5f;
+
+    color: #ffffff;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    border: 2px solid #c59d5f;
+    border-radius: 50px;
+
+    transition: all 0.3s ease;
+}
+
+/* hover */
+.boton-reserva:hover {
+    background-color: transparent;
+
+    color: #c59d5f;
+
+    transform: translateY(-2px);
+}
+
+/* ─────────────────────────────
+   BOTÓN MENÚ MÓVIL
+───────────────────────────── */
+
+.menu-toggle {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: #ffffff;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #c59d5f;
+}
+
+/* ─────────────────────────────
+   RESPONSIVE
+───────────────────────────── */
+
+@media (max-width: 900px) {
+
+    .header-contenedor {
+        position: relative;
+
+        flex-wrap: wrap;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 12px;
+    /* botón visible */
+    .menu-toggle {
+        display: block;
     }
 
-    .logo {
-        font-size: 1.5rem;
+    /* ocultar navegación */
+    .navegacion {
+        width: 100%;
+
+        display: none;
+    }
+
+    /* menú móvil */
+    .navegacion ul {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 1.5rem;
+
+        padding: 2rem 0;
+    }
+
+    /* CTA ocupa ancho */
+    .boton-reserva {
+        display: none;
+    }
+
+    .navegacion.activa {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header-contenedor {
+        padding: 1rem 1.2rem;
+    }
+
+    .logo a {
+        font-size: 1.3rem;
     }
 }
