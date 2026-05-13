@@ -69,16 +69,29 @@
     <main>
 
         <!-- Banner principal -->
-        <section class="banner">
+        <section class="banner" aria-labelledby="titulo-banner">
+
+            <!-- Imagen del banner -->
+            <img src="/img/banner-barberia.webp" alt="Interior de MiBarbería en Madrid" class="banner-imagen"
+                width="1600" height="900" fetchpriority="high">
+
+            <!-- Contenido del banner -->
             <div class="banner-contenido">
-                <h1>Tu barbería de confianza en Madrid</h1>
+
+                <h1 id="titulo-banner">
+                    Tu barbería de confianza en Madrid
+                </h1>
 
                 <p>
                     Cortes modernos, afeitado clásico y el mejor cuidado para tu imagen.
                 </p>
 
-                <button>Reservar cita</button>
+                <a href="#contacto" class="boton-banner">
+                    Reservar cita
+                </a>
+
             </div>
+
         </section>
 
 
@@ -125,7 +138,7 @@
                 </p>
             </div>
             <div>
-                <img src="img/aboutus.png" alt="Barbero trabajando en una barbería clásica" loading="lazy">
+                <img src="img/aboutus.webp" alt="Barbero trabajando en una barbería clásica" loading="lazy" width="800" height="800">
             </div>
         </section>
 
