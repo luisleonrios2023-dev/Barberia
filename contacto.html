@@ -67,40 +67,189 @@
         </nav>
     </header>
     <main>
-        <section class="contacto-hero">
-            <h1>Contacto</h1>
-            <p>Estamos encantados de atenderte. Escríbenos y responderemos lo antes posible.</p>
-        </section>
 
-        <section class="contacto-formulario">
-            <form id="form-contacto">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+        <!-- Banner principal -->
+        <section class="contacto-banner" aria-labelledby="titulo-contacto">
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            <img src="/img/banner-contacto.webp" alt="Interior de MiBarbería en Madrid" class="contacto-banner-imagen"
+                width="1600" height="700" fetchpriority="high">
 
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="5" required
-                    placeholder="Escribe tu mensaje aquí..."></textarea>
+            <div class="contacto-banner-contenido">
 
-                <button type="submit">Enviar</button>
-            </form>
+                <h1 id="titulo-contacto">
+                    Contacta con MiBarbería
+                </h1>
 
-            <div class="contacto-info">
-                <h2>Nuestra ubicación</h2>
-                <p>Dirección: Calle Doctor Esquerdo 120</p>
-                <p>Teléfono: +34 912 345 678</p>
-                <p>Email: contacto@mibarberia.com</p>
-                <p>Ciudad: Madrid, España</p>
-                <h2>Redes sociales</h2>
                 <p>
-                    <img src="/img/icono-instagram.webp" alt="Instagram" class="icono-redes">
-                    <img src="/img/icono-facebook.webp" alt="Facebook" class="icono-redes">
-                    <img src="/img/icono-x.webp" alt="YouTube" class="icono-redes">
+                    Estamos encantados de atenderte. Escríbenos y responderemos lo antes posible.
                 </p>
+
             </div>
+
         </section>
+
+
+        <!-- Contenido principal -->
+        <section class="contacto-contenido" aria-labelledby="titulo-formulario">
+
+            <!-- Formulario -->
+            <section class="contacto-formulario">
+
+                <h2 id="titulo-formulario">
+                    Envíanos un mensaje
+                </h2>
+
+                <form id="form-contacto" action="/enviar-formulario" method="post">
+
+                    <fieldset>
+
+                        <legend>Formulario de contacto</legend>
+
+                        <!-- Nombre -->
+                        <div class="grupo-formulario">
+
+                            <label for="nombre">
+                                Nombre
+                            </label>
+
+                            <input type="text" id="nombre" name="nombre" required autocomplete="name"
+                                placeholder="Tu nombre">
+
+                        </div>
+
+
+                        <!-- Email -->
+                        <div class="grupo-formulario">
+
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input type="email" id="email" name="email" required autocomplete="email"
+                                placeholder="tu@email.com">
+
+                        </div>
+
+
+                        <!-- Mensaje -->
+                        <div class="grupo-formulario">
+
+                            <label for="mensaje">
+                                Mensaje
+                            </label>
+
+                            <textarea id="mensaje" name="mensaje" rows="6" required
+                                placeholder="Escribe tu mensaje aquí..."></textarea>
+
+                        </div>
+
+
+                        <!-- Botón -->
+                        <button type="submit">
+                            Enviar mensaje
+                        </button>
+
+                    </fieldset>
+
+                </form>
+
+            </section>
+
+
+            <!-- Información -->
+            <aside class="contacto-info" aria-labelledby="titulo-info">
+
+                <h2 id="titulo-info">
+                    Nuestra ubicación
+                </h2>
+
+                <address>
+
+                    <ul>
+
+                        <li>
+                            <strong>Dirección:</strong>
+                            Calle Doctor Esquerdo 120, Madrid
+                        </li>
+
+                        <li>
+                            <strong>Teléfono:</strong>
+
+                            <a href="tel:+34912345678">
+                                +34 912 345 678
+                            </a>
+                        </li>
+
+                        <li>
+                            <strong>Email:</strong>
+
+                            <a href="mailto:contacto@mibarberia.com">
+                                contacto@mibarberia.com
+                            </a>
+                        </li>
+
+                        <li>
+                            <strong>Metro cercano:</strong>
+                            O'Donnell
+                        </li>
+
+                    </ul>
+
+                </address>
+
+
+                <!-- Redes sociales -->
+                <section class="contacto-redes" aria-labelledby="titulo-redes">
+
+                    <h2 id="titulo-redes">
+                        Redes sociales
+                    </h2>
+
+                    <nav aria-label="Redes sociales de MiBarbería">
+
+                        <ul>
+
+                            <li>
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Instagram de MiBarbería">
+
+                                    <img src="/img/icono-instagram.webp" alt="" aria-hidden="true" width="32"
+                                        height="32">
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Facebook de MiBarbería">
+
+                                    <img src="/img/icono-facebook.webp" alt="" aria-hidden="true" width="32"
+                                        height="32">
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="https://x.com" target="_blank" rel="noopener noreferrer"
+                                    aria-label="X de MiBarbería">
+
+                                    <img src="/img/icono-x.webp" alt="" aria-hidden="true" width="32" height="32">
+
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </section>
+
+            </aside>
+
+        </section>
+
     </main>
     <footer>
 
