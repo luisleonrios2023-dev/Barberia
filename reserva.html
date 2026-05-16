@@ -59,7 +59,242 @@
 </head>
 
 <body>
+    <main>
 
+        <!-- Banner principal -->
+        <section class="banner-reserva" aria-labelledby="titulo-banner-reserva">
+
+            <!-- Imagen del banner -->
+            <img src="/img/banner-reserva.webp" alt="Cliente reservando cita en MiBarbería"
+                class="banner-reserva-imagen" width="1920" height="800" fetchpriority="high">
+
+            <!-- Contenido -->
+            <div class="banner-reserva-contenido">
+
+                <h1 id="titulo-banner-reserva">
+                    Reserva tu cita en MiBarbería
+                </h1>
+
+                <p>
+                    Escoge tu servicio, selecciona la fecha y la hora que mejor te venga.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Formulario de reserva -->
+        <section class="reserva" aria-labelledby="titulo-reserva">
+
+            <div class="reserva-contenedor">
+
+                <h2 id="titulo-reserva">
+                    Formulario de Reserva
+                </h2>
+
+                <p>
+                    Completa el siguiente formulario para reservar tu cita.
+                </p>
+
+
+                <!-- Formulario -->
+                <form action="/reservar-cita" method="post" class="formulario-reserva">
+
+                    <fieldset>
+
+                        <legend>
+                            Información de la reserva
+                        </legend>
+
+
+                        <!-- Nombre -->
+                        <div class="grupo-formulario">
+
+                            <label for="nombre">
+                                Nombre
+                            </label>
+
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name"
+                                required>
+
+                        </div>
+
+
+                        <!-- Teléfono -->
+                        <div class="grupo-formulario">
+
+                            <label for="telefono">
+                                Teléfono
+                            </label>
+
+                            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000"
+                                autocomplete="tel" required>
+
+                        </div>
+
+
+                        <!-- Servicio -->
+                        <div class="grupo-formulario">
+
+                            <label for="servicio">
+                                Servicio
+                            </label>
+
+                            <select id="servicio" name="servicio" required>
+
+                                <option value="">
+                                    Selecciona un servicio
+                                </option>
+
+
+                                <!-- Packs -->
+                                <optgroup label="Packs Premium">
+
+                                    <option value="corte-barba">
+                                        Corte + Barba — 25€
+                                    </option>
+
+                                    <option value="corte-barba-hipster">
+                                        Corte + Barba Hipster — 32€
+                                    </option>
+
+                                    <option value="corte-afeitado">
+                                        Corte + Afeitado — 30€
+                                    </option>
+
+                                    <option value="corte-maquina-barba">
+                                        Corte a Máquina + Barba — 29€
+                                    </option>
+
+                                </optgroup>
+
+
+                                <!-- Barba -->
+                                <optgroup label="Barba">
+
+                                    <option value="afeitado-clasico">
+                                        Afeitado Clásico — 17€
+                                    </option>
+
+                                    <option value="arreglo-barba">
+                                        Arreglo de Barba — 17€
+                                    </option>
+
+                                    <option value="barba-hipster">
+                                        Barba Hipster — 19€
+                                    </option>
+
+                                    <option value="diseno-barba">
+                                        Diseño de Barba — 19€
+                                    </option>
+
+                                </optgroup>
+
+
+                                <!-- Cortes -->
+                                <optgroup label="Cortes">
+
+                                    <option value="corte-clasico">
+                                        Corte Clásico — 17€
+                                    </option>
+
+                                    <option value="diseno-corte">
+                                        Diseño de Corte — 19€
+                                    </option>
+
+                                    <option value="corte-jubilado">
+                                        Corte Jubilado — 14€
+                                    </option>
+
+                                    <option value="corte-infantil">
+                                        Corte Infantil — 15€
+                                    </option>
+
+                                    <option value="afeitado-cabeza">
+                                        Afeitado de Cabeza — 17€
+                                    </option>
+
+                                    <option value="repaso-cuello">
+                                        Repaso de Cuello — 10€
+                                    </option>
+
+                                </optgroup>
+
+
+                                <!-- Depilación -->
+                                <optgroup label="Depilación">
+
+                                    <option value="cejas">
+                                        Cejas — 6€
+                                    </option>
+
+                                    <option value="orejas">
+                                        Orejas — 8€
+                                    </option>
+
+                                    <option value="nariz">
+                                        Nariz — 8€
+                                    </option>
+
+                                </optgroup>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Fecha -->
+                        <div class="grupo-formulario">
+
+                            <label for="fecha">
+                                Fecha
+                            </label>
+
+                            <input type="date" id="fecha" name="fecha" required>
+
+                        </div>
+
+
+                        <!-- Hora -->
+                        <div class="grupo-formulario">
+
+                            <label for="hora">
+                                Hora
+                            </label>
+
+                            <input type="time" id="hora" name="hora" min="09:00" max="19:00" required>
+
+                        </div>
+
+
+                        <!-- Comentarios -->
+                        <div class="grupo-formulario">
+
+                            <label for="comentarios">
+                                Comentarios (Opcional)
+                            </label>
+
+                            <textarea id="comentarios" name="comentarios" rows="5"
+                                placeholder="Añade información adicional si lo necesitas..."></textarea>
+
+                        </div>
+
+
+                        <!-- Botón -->
+                        <button type="submit">
+                            Reservar cita
+                        </button>
+
+                    </fieldset>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
 </body>
 
 </html>
