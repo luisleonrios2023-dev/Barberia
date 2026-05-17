@@ -7,7 +7,6 @@ if (icono_menu && menu) {
 
 
     icono_menu.addEventListener("click", () => {
-        console.log(icono_menu);
 
         // Activa/desactiva menú
         menu.classList.toggle("activa");
