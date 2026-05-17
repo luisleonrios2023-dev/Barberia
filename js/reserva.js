@@ -84,12 +84,12 @@ formulario.addEventListener("submit", function (evento) {
 
     // Horario permitido:
     // 09:00 → 540 min
-    // 18:00 → 1080 min
-    if (totalMinutos < 540 || totalMinutos > 1080) {
+    // 18:30 → 1110 min
+    if (totalMinutos < 540 || totalMinutos > 1110) {
 
         evento.preventDefault();
 
-        alert("La barbería solo atiende de 09:00 a 18:00.");
+        alert("La barbería solo atiende de 09:00 a 18:30.");
 
         return;
     }
