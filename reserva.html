@@ -59,6 +59,69 @@
 </head>
 
 <body>
+
+    <header class="header">
+
+        <div class="header-contenedor">
+
+            <!-- Logo -->
+            <div class="logo">
+
+                <a href="/index.html" aria-label="Ir al inicio de MiBarbería">
+
+                    <strong>MiBarbería</strong>
+
+                </a>
+
+            </div>
+
+
+            <!-- Botón menú móvil -->
+            <button class="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+
+                ☰
+
+            </button>
+
+
+            <!-- Navegación principal -->
+            <nav class="navegacion" aria-label="Navegación principal">
+
+                <ul>
+
+                    <li>
+                        <a href="./servicios.html">
+                            Servicios
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./index.html#sobre-nosotros">
+                            Sobre nosotros
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- Botón CTA -->
+            <a href="./reserva.html" class="boton-reserva">
+
+                Reservar cita
+
+            </a>
+
+        </div>
+
+    </header>
     <main>
 
         <!-- Banner principal -->
@@ -99,7 +162,7 @@
 
 
                 <!-- Formulario -->
-                <form action="/reservar-cita" method="post" class="formulario-reserva">
+                <form action="https://formspree.io/f/mykovpad" method="post" class="formulario-reserva">
 
                     <fieldset>
 
@@ -295,6 +358,83 @@
         </section>
 
     </main>
+
+    <footer>
+
+        <!-- Parte superior del footer -->
+        <div class="footer-contenido">
+
+            <!-- Redes sociales -->
+            <section class="redes-sociales" aria-labelledby="titulo-redes">
+
+                <h3 id="titulo-redes">Redes Sociales</h3>
+
+                <nav aria-label="Redes sociales de Mi Barbería">
+                    <ul>
+                        <li>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                                aria-label="Visitar Facebook de Mi Barbería">
+                                <img src="/img/icono-facebook.webp" alt="" aria-hidden="true" loading="lazy" width="32"
+                                    height="32">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://x.com" target="_blank" rel="noopener noreferrer"
+                                aria-label="Visitar X (Twitter) de Mi Barbería">
+                                <img src="/img/icono-x.webp" alt="" aria-hidden="true" loading="lazy" width="32"
+                                    height="32">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                                aria-label="Visitar Instagram de Mi Barbería">
+                                <img src="/img/icono-instagram.webp" alt="" aria-hidden="true" loading="lazy" width="32"
+                                    height="32">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </section>
+
+            <!-- Dirección -->
+            <section class="direccion" aria-labelledby="titulo-direccion">
+
+                <h3 id="titulo-direccion">Dirección</h3>
+
+                <address>
+                    <ul>
+                        <li><strong>Dirección:</strong> Calle Doctor Esquerdo 120</li>
+                        <li><strong>Teléfono:</strong> <a href="tel:+34912345678">+34 912 345 678</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:contacto@mibarberia.com">contacto@mibarberia.com</a>
+                        </li>
+                        <li><strong>Ciudad:</strong> Madrid, España</li>
+                    </ul>
+                </address>
+
+            </section>
+
+        </div>
+
+        <!-- Parte inferior -->
+        <div class="footer-copy">
+            <p>Todos los derechos reservados.</p>
+            <nav aria-label="Enlaces legales">
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Aviso legal</a></li>
+                </ul>
+            </nav>
+            <small>
+                © 2026 MiBarberia - Desarrollado por
+                <strong>Luis León</strong>
+            </small>
+
+        </div>
+
+    </footer>
 </body>
 
 </html>
