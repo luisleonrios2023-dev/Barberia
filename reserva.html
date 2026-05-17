@@ -53,7 +53,7 @@
     <link rel="stylesheet" href="./css/reserva.css">
 
     <!-- JS -->
-    <script type="module" src="./js/index.js" defer>
+    <script type="module" src="./js/reserva.js" defer>
     </script>
 
 </head>
@@ -179,7 +179,7 @@
                             </label>
 
                             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name"
-                                required>
+                                minlength="2" maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" required>
 
                         </div>
 
@@ -192,7 +192,7 @@
                             </label>
 
                             <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000"
-                                autocomplete="tel" required>
+                                autocomplete="tel" pattern="^\+?[0-9\s]{9,15}$" minlength="9" maxlength="15" required>
 
                         </div>
 
@@ -206,7 +206,7 @@
 
                             <select id="servicio" name="servicio" required>
 
-                                <option value="">
+                                <option value=""  disabled selected>
                                     Selecciona un servicio
                                 </option>
 
@@ -326,7 +326,8 @@
                                 Hora
                             </label>
 
-                            <input type="time" id="hora" name="hora" min="09:00" max="19:00" required>
+                            <input type="time" id="hora" name="hora" min="09:00" max="18:00" step="1800" required> <!--  restringir por intervalos de hora cada 30 min -->
+                           
 
                         </div>
 
@@ -338,7 +339,7 @@
                                 Comentarios (Opcional)
                             </label>
 
-                            <textarea id="comentarios" name="comentarios" rows="5"
+                            <textarea id="comentarios" name="comentarios" rows="5" maxlength="300"
                                 placeholder="Añade información adicional si lo necesitas..."></textarea>
 
                         </div>
