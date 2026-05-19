@@ -32,11 +32,11 @@ try {
         ":comentarios" => $comentarios
     ]);
 
-    header("Location: ../reserva.html?status=ok");
+    header("Location: ../html/reserva.html?status=ok");
     exit;
 
 } catch (PDOException $e) {
 
-    header("Location: ../reserva.html?status=error");
+    header("Location: ../html/reserva.html?status=error");
     exit;
 }
